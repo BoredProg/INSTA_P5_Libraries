@@ -1,0 +1,65 @@
+[version 0.7]
+18 jun 2013
+- moved PGraphics renderer into an accessor
+- added tintR/G/B to NestImageSprite
+- added ui package, with NestTextInput and NestButton
+- added tab chaining to NestTextInput
+- bug fixes in NestButton from Fabian
+- non-input events can now bubble
+- copied Processing MouseEvent and KeyEvent API to Nest's MouseEvent and KeyEvent
+- fixed mouseDragged bug in NestSprite
+
+[version 0.6]
+23 jan 2013
+- updated examples, added blendMode example
+- renamed NestSpriteContainer.update() to updateDisplayList()
+- added blendMode()
+- added PGraphics g for rendering into a separate graphics context
+- internal drawing/transformation calls all made on PGraphics instead of PApplet
+
+[version 0.51]
+22 dec 2012
+NOTE: works with 2.0b7+ ONLY
+- updated event framework for Processing 2.0 compatibility
+
+[version 0.5]
+10 july 2012
+NOTE: works with 2.0a6+ ONLY
+- added NestImageSprite
+- added NestTextSprite
+- added NestSprite.setUpdate() and setDraw() signatures with no params
+- added NestSprite.inFront and GL check
+
+[version 0.41]
+13 february 2012
+- fixed bug in NestSprite.localToGlobal()
+
+
+[version 0.4]
+28 december 2011
+- 'lazy' sprite updating/drawing implemented
+  (NestSprite.setUpdate()/setDraw())
+- updated to Processing 2.0 (alpha)
+- added SimpleSprites example
+- added LazySprites example
+- changed license to LGPL
+
+
+[version 0.3]
+17 august 2011
+- renamed PSprite/Container to NestSprite/Container to avoid Processing's reserved P* naming convention
+- updated examples accordingly
+- added GPL license
+
+
+[version 0.2]
+12 august 2011
+- cleanup of events and event flow
+- Event.stopPropagation() implemented
+- removed 'outside' mouse events
+- fixed misc event-related bugs
+
+
+[version 0.1]
+29 may 2011
+- initial release of Processing Scenegraph.

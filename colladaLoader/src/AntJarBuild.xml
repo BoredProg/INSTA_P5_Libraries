@@ -1,0 +1,33 @@
+<project name="colladaLoader" default="makeJar" basedir=".">
+
+	<target name="makeJar">
+    	<tstamp/>
+    	<mkdir dir="bin"/>
+    	<javac srcdir="src" classpath="core.jar" destdir="bin"/>
+    	<jar jarfile="colladaLoader.jar" basedir="bin"/>
+    	<delete dir="bin"/>
+	</target>
+	<target name="javadoc">
+		<mkdir dir="doc"/>
+		<javadoc sourcepath="src" destdir="doc" overview="docRessource/introDoc.txt" additionalparam="-private" />
+	</target>
+</project>
+
+<!-- 
+to run that in eclipse set env's! choose:
+
+run -> extern tools -> extern tool configurations.. -> Environment
+
+then add:
+
+Variable	Value
+ANT_HOME	E:\programme\eclipse\plugins\org.apache.ant_1.7.1.v20100518-1145
+JAVA_HOME 	C:\Programme\Java\jdk1.6.0_22
+PATH 		C:\Programme\Java\jdk1.6.0_22\bin;${env_var:JAVA_HOME}
+
+check also:
+Run->External Tools->External Tools Configurations-> JRE -> installed JRE's 
+ then be shure the locations: C:\Programme\Java\jdk1.6.0_22 (select JDK instead JRE)
+
+get Note that you need core.jar from processing for compiling
+-->
